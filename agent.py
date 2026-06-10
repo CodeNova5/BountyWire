@@ -62,7 +62,7 @@ def run_recon_agent(target_id: str, domain: str):
     
     # Structured outputs ensure our agent gives reliable evaluations
     completion = ai_client.beta.chat.completions.parse(
-        model="llama3-70b-8192",
+        model="openai/gpt-oss-20b",
         messages=[{"role": "user", "content": prompt}],
         response_format=TakeoverAnalysis,
     )
